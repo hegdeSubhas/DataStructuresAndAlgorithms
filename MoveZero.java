@@ -14,7 +14,6 @@ public class MoveZero {
                 index++;
             }
         }
-
     public static void main(String[] args) {
         int[] arr={1,0,12,0,3,0};
         MoveZero.moveZeroes(arr);
