@@ -1,5 +1,5 @@
-import java.util.HashSet;
 //217. Contains Duplicate
+import java.util.HashSet;
 public class ContainsDuplicate  {
     public static boolean containsDuplicate(int[] nums) {
         HashSet<Integer> set =new HashSet<>();
@@ -8,7 +8,6 @@ public class ContainsDuplicate  {
         }
         return false;
     }
-
     public static void main(String[] args) {
         int[] array= {1,2,3,1};
         System.out.println(ContainsDuplicate.containsDuplicate(array));
