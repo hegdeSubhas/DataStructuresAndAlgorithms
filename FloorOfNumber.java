@@ -3,6 +3,7 @@ public class FloorOfNumber {
         int low=0;
         int high=arr.length-1;
         int mid=0;
+        if(target>arr[high]) return -1;
         while(low<=high){
             mid=low+(high-low)/2;
             if(arr[mid]==target){
@@ -17,6 +18,6 @@ public class FloorOfNumber {
     }
     public static void main(String[] args) {
         int[] arr={2,3,5,9,14,16,18};
-        System.out.println(Floor(arr,15));
+        System.out.println(Floor(arr,20));
     }
 }
