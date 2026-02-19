@@ -3,7 +3,8 @@ public class Ceiling {
         int low=0;
         int high=arr.length-1;
         int mid=0;
-        while(low<high){
+        if(target>arr[high]) return -1;
+        while(low<=high){
             mid=low+(high-low)/2;
             if(arr[mid]==target){
                 return target;
@@ -13,10 +14,10 @@ public class Ceiling {
                 low=mid+1;
             }
         }
-        return mid;
+        return low;
     }
     public static void main(String[] args) {
-        int[] arr={2,3,4,9,14,16,18};
+        int[] arr={2,3,5,9,14,16,18};
         System.out.println(ceiling(arr,15));
     }
 }
