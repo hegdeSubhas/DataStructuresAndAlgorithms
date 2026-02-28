@@ -1,20 +1,29 @@
+import java.util.Arrays;
+
 //268 Missing Number
 public class MissingNumber {
-    public static int  Missing(int[] nums){
-        int sum=0;
-        int asum=0;
-        for (int num : nums) {
-            sum += num;
+    public static int cycleSorting(int[] arr){
+        int i=0;
+        while(i<arr.length){
+            int correctIndex=arr[i];
+            if(arr[i]<arr.length && arr[i]!=arr[correctIndex]) {
+                int temp = arr[correctIndex];
+                arr[correctIndex] = arr[i];
+                arr[i] = temp;
+            }else{
+                i++;
+            }
         }
-        for(int i=0;i<nums.length;i++){
-            asum+=i;
+        for(int j=0;j<arr.length;j++){
+            if(arr[j]!=j){
+                return j;
+            }
         }
-        return sum-asum;
+        return arr.length;
     }
 
     public static void main(String[] args) {
         int[] arr ={0,1,2,4};
-        int ans = MissingNumber.Missing(arr);
-        System.out.println(ans);
+        System.out.println(cycleSorting(arr));
     }
 }
