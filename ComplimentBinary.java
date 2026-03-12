@@ -4,7 +4,7 @@ public class ComplimentBinary {
     }
     public static int complimentBinary(int n){
         int bits=Integer.toBinaryString(n).length();
-        int shift=(1>>bits)-1;
+        int shift=(1<<bits)-1;
         return n^shift;
     }
 }
